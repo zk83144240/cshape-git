@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_NetFramework"
         mc:Ignorable="d"
-        Title="第一个窗口" Height="440" Width="800">
+        Title="第一个窗口" Height="440" Width="800" FontSize="14" FontFamily="Arial Black">
     <Window.Resources>
         <Style x:Key="ButtonStyle1" TargetType="Button">
             <Setter Property="Background" Value="AliceBlue"/>
@@ -27,14 +27,14 @@
             </Grid.RowDefinitions>
             <StackPanel Background="AliceBlue" HorizontalAlignment="Center" Orientation="Horizontal">
                 <TextBlock Text="用戶名:" FontSize="18" VerticalAlignment="Center"/>
-                <TextBox x:Name="username"  Width="300" Height="40" Margin="10" FontSize="22" VerticalAlignment="Center" Foreground="Red"/>
+                <TextBox Text="{Binding UserName}"  Width="300" Height="40" Margin="10" FontSize="22" VerticalAlignment="Center" Foreground="Red"/>
             </StackPanel>
             <StackPanel Grid.Row="1" Background="AliceBlue" HorizontalAlignment="Center" Orientation="Horizontal">
                 <TextBlock Text="密碼:   " FontSize="18" VerticalAlignment="Center"/>
-                <TextBox x:Name="password" Width="300" Height="40" Margin="10" FontSize="22" VerticalAlignment="Center"/>
+                <TextBox Text="{Binding Password}" Width="300" Height="40" Margin="10" FontSize="22" VerticalAlignment="Center"/>
             </StackPanel>
         </Grid>
-        <CheckBox Grid.Row="2" Content="記住密碼" HorizontalAlignment="Center" FontSize="15" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="2" Content="記住密碼" HorizontalAlignment="Center" FontSize="15" VerticalAlignment="Center" IsChecked="False"/>
         <Button x:Name="btnLogin" Click="btn_click"  Grid.Row="3" Content="登录" FontSize="18" Width="80" Height="40" Style="{StaticResource ButtonStyle1}"/>
     </Grid>
 </Window>
