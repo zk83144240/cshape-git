@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace NetCoreDemo
 {
-    internal class MyDbContext:DbContext
+    class MyDbContext:DbContext
     {
         public DbSet<Book> Books { get; set; }
+        public DbSet<Person> Persons { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySql("server=localhost;database=mes;user=root;password=1234;", 

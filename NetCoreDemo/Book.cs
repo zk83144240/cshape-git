@@ -9,8 +9,10 @@ namespace NetCoreDemo
     public class Book
     {
         public long Id { get; set; }
-        public string Title { get; set; }
+        public string? Title { get; set; }
         public DateTime PublishDate { get; set; }
         public double Price { get; set; }
+        public Person Author { get; set; }
+        
     }
 }
