@@ -23,7 +23,7 @@ namespace WebApi1.Controllers
             // 将请求中的Title和Content写入文件
             System.IO.File.WriteAllText(req.Title+".txt", req.Content);
             // 返回ok
-            return "ok";
+            return "ok";  
         }
     }
 }
