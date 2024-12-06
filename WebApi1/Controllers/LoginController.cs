@@ -12,11 +12,11 @@ namespace WebApi1.Controllers
         public LoginResponse Login(LoginRequest req)
         {
             //验证用户名和密码
-            if (req.Username == "admin" && req.Password == "123456")
+            if (req.UserName == "admin" && req.Password == "123456")
             {
                 //返回进程信息
-                var items = Process.GetProcesses().Select(p => new ProcessInfo(p.Id, p.ProcessName, p.WorkingSet64)).ToArray();
-                return new LoginResponse(true, items.ToArray());
+                var processes = Process.GetProcesses().Select(p => new ProcessInfo(p.Id, p.ProcessName, p.WorkingSet64)).ToArray();
+                return new LoginResponse(true, processes);
             }
             else
             {
@@ -25,9 +25,9 @@ namespace WebApi1.Controllers
         }
     }
     //创建用户登录类
-    public record LoginRequest(string Username, string Password);
+    public record LoginRequest(string UserName, string Password);
     //创建进程信息类
-    public record ProcessInfo(long Id, string Name, long MemoryUsage);
+    public record ProcessInfo(long Id, string ProcessName, long WorkingSet);
     //创建用户登录响应类
-    public record LoginResponse(bool ok,ProcessInfo[] ProcessInfos);
+    public record LoginResponse(bool IsOK,ProcessInfo[]? Processes);
 }
