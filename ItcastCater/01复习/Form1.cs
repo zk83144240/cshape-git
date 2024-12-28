@@ -20,6 +20,7 @@ namespace _01复习
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            #region 手动写查询代码
             //操作数据库的类：
             //SQLiteConnection：数据库连接对象
             //SQLiteCommand：数据库操作对象
@@ -40,7 +41,7 @@ namespace _01复习
             //需要在项目同级建library文件夹，将System.Data.SQLite.dll文件和
             //System.Data.SQLite.xml文件拷贝到该文件夹中，右键引用右键引用，添加引用
             //System.Data.SQLite.dll文件，然后就可以using System.Data.SQLite了
-            using (SQLiteConnection conn = new SQLiteConnection(connStr)) 
+            using (SQLiteConnection conn = new SQLiteConnection(connStr))
             {
                 //3.创建Command对象
                 SQLiteCommand cmd = new SQLiteCommand("select * from ManagerInfo", conn);
@@ -51,7 +52,7 @@ namespace _01复习
                 //6.遍历结果集
                 if (reader.HasRows)
                 {
-                   while (reader.Read())
+                    while (reader.Read())
                     {
                         list.Add(new ManagerInfo()
                         {
@@ -66,9 +67,13 @@ namespace _01复习
                 //7.将数据显示到DataGridView控件中
                 dataGridView1.DataSource = list;
 
-                    
-           
-            }
+
+
+            } 
+            #endregion
+           //使用封装的SQLiteHelp类的GetDataTable方法查询数据
+           dataGridView1.DataSource = SqliteHelp.GetDataTable("select * from ManagerInfo");
+            //
         }
     }
 }
