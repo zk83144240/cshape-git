@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:图书管理系统"
         mc:Ignorable="d"
         Title="图书管理系统1" Height="450" Width="800" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Background="Gray">
         <Grid.RowDefinitions>
             <RowDefinition Height="50*"/>
             <RowDefinition Height="46*"/>
@@ -31,9 +31,9 @@
         <StackPanel Grid.Column="1" Orientation="Vertical" Grid.ColumnSpan="2" Margin="51,0,0,0" Grid.RowSpan="4">
            
             <TextBlock Text="书名" Margin="5" TextAlignment="Center"/>
-            <TextBox Name="textBox1" Width="260" Height="30" Margin="5" Text="{Binding BName}" Background="Gray" TextAlignment="Center"/>
+            <TextBox Name="textBox1" Width="260" Height="30" Margin="5" Text="{Binding BName}"  TextAlignment="Center"/>
             <TextBlock Text="作者" Margin="5" TextAlignment="Center"/>
-            <TextBox Name="textBox2" Width="260" Height="30" Margin="5" Text="{Binding BAuthor}" Background="Gray" TextAlignment="Center"/>
+            <TextBox Name="textBox2" Width="260" Height="30" Margin="5" Text="{Binding BAuthor}"  TextAlignment="Center"/>
             
             
             <Button Width="260" Height="30" Margin="5" Content="添加" Click="Add_Click"/>
