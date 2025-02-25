@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.35229.62
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hz_mes", "hz_mes.csproj", "{A139411F-204E-47BF-858B-6177A1840B1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A139411F-204E-47BF-858B-6177A1840B1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A139411F-204E-47BF-858B-6177A1840B1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A139411F-204E-47BF-858B-6177A1840B1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A139411F-204E-47BF-858B-6177A1840B1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {73107A15-69E2-43B6-AE92-D1D017A54AFC}
+	EndGlobalSection
+EndGlobal

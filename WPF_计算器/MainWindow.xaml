@@ -1,0 +1,43 @@
+﻿<Window x:Class="WPF_计算器.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_计算器"
+        mc:Ignorable="d"
+        Title="简易计算器" Height="350" Width="300">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtResult"  Height="45" Margin="10,20,0,0" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="230" FontSize="30" TextAlignment="Right" InputMethod.IsInputMethodEnabled="False"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btn1" Content="1" Height="30" Margin="10,10,0,0" Width="50" Click="OnClick"/>
+                <Button x:Name="btn2" Content="2" Height="30" Width="50" Margin="10,10,0,0" Click="OnClick"/>
+                <Button x:Name="btn3" Content="3" Height="30" Width="50" Margin="10,10,0,0" Click="OnClick"/>
+                <Button x:Name="btn_cu" Content="/" Height="30" Width="50" Margin="10,10,0,0" Click="OnOperatorClick"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btn4" Content="4" Height="30" Margin="10,10,0,0" Width="50" Click="OnClick"/>
+                <Button x:Name="btn5" Content="5" Height="30" Width="50" Margin="10,10,0,0" Click="OnClick"/>
+                <Button x:Name="btn6" Content="6" Height="30" Width="50" Margin="10,10,0,0" Click="OnClick"/>
+                <Button x:Name="btn_cen" Content="*" Height="30" Width="50" Margin="10,10,0,0" Click="OnOperatorClick"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Width="795">
+                <Button x:Name="btn7" Content="7" Height="30" Margin="10,10,0,0" Width="50" Click="OnClick"/>
+                <Button x:Name="btn8" Content="8" Height="30" Width="50" Margin="10,10,0,0" Click="OnClick"/>
+                <Button x:Name="btn9" Content="9" Height="30" Width="50" Margin="10,10,0,0" Click="OnClick"/>
+                <Button x:Name="btn_jia" Content="+" Height="30" Width="50" Margin="10,10,0,0" Click="OnOperatorClick"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btn0" Content="0" Height="30" Margin="10,10,0,0" Width="110" Click="OnClick"/>
+                <Button x:Name="btn_dian" Content="." Height="30" Width="50" Margin="10,10,0,0" Click="OnDecimalClick"/>
+                <Button x:Name="btn_jian" Content="-" Height="30" Width="50" Margin="10,10,0,0" Click="OnOperatorClick"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="btnc" Content="c" Height="30" Margin="10,10,0,0" Width="110" Click="OnClearClick"/>
+                <Button x:Name="btn_den" Content="=" Height="30" Width="110" Margin="10,10,0,0" Click="OnEqualClick"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
